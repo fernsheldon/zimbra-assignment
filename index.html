@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contacts - Sheldon Fernandes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<style></style>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <div class="mainFrame">
+        <div class="contactContainer">
+            <div>
+                <input class="searchBox" id="searchBox" placeholder="Search your Contacts" onkeyup="filterContacts()">
+            </div>
+            <div class="contactScrollList">
+                <ul id="contactList">
+
+                </ul>
+            </div>
+        </div>
+        <div class="contactDetails">
+            <div class="contactDetailHeader">
+                <img class="selectedContactImg" alt="selectedContactImg" src="img/noImage.png">
+                <input type="text" id="selctedContactName" class="xlFont" readonly>
+            </div>
+            <div class="contactsFormDetails">
+                <form name="myForm">
+                    <div id="emailBlock" class="infoBlock">
+                        <div class="formHeading">Email:</div>
+                        <div><input type="email" name="email" value="" placeholder="" readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="phoneBlock" class="infoBlock">
+                        <div class="formHeading">Phone:</div>
+                        <div><input type="number" name="phone" value="" placeholder=""  readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="imBlock" class="infoBlock">
+                        <div class="formHeading">IM:</div>
+                        <div><input type="text" name="im" value="" placeholder=""  readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="addressBlock" class="infoBlock">
+                        <div class="formHeading">Address:</div>
+                        <div><input type="text" name="address" value="" placeholder=""  readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="urlBlock" class="infoBlock">
+                        <div class="formHeading">URL:</div>
+                        <div><input type="text" name="url" value="" placeholder=""  readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="otherBlock" class="infoBlock">
+                        <div class="formHeading">Birthday:</div>
+                        <div><input type="text" name="other" value="" placeholder=""  readonly></div>
+                        <hr/>
+                    </div>
+                    <div id="saveButton">
+                       <input type="button" id="saveContactButton" class="button save" onClick="saveContact()" value="Save" />
+                       <input type="button" id="cancelContactButton" class="button cancel" onClick="cancelSave()" value="Cancel" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/properties.js"></script>
+    <script src="js/httpClient.js"></script>
+    <script src="js/contacts.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script> -->
+</body>
+
+</html>
